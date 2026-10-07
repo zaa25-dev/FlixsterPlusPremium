@@ -28,7 +28,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img width="800" height="450" alt="popularmovies-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/7e8833dd-644b-4f6d-89fd-4e48c3757e2d" />
+
+
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
