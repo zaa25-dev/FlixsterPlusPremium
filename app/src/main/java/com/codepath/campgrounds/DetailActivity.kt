@@ -30,9 +30,18 @@ class DetailActivity : AppCompatActivity() {
         campground?.let {
             campgroundNameTV.text = it.name
             campgroundDescriptionTV.text = it.description
-            campgroundLatLongTV.text = "Rating: ${it.voteAverage ?: 0.0} / 10\n" + "Votes: ${it.voteCount ?: 0}\n" + "Release Date: ${it.latLong ?: "N/A"}"
 
-            // Loads the wide backdrop banner instead of reusing the main screen poster
+
+            val formattedRating = it.voteAverage?.let { score ->
+                String.format("%.1f", score)
+            } ?: "N/A"
+
+            val formattedVotes = it.voteCount?.let { count ->
+                String.format("%,d", count)
+            } ?: "0"
+
+            campgroundLatLongTV.text = " $formattedRating / 10  •   $formattedVotes votes\n Release Date: ${it.latLong ?: "N/A"}"
+
             Glide.with(this)
                 .load(it.backdropUrl)
                 .into(campgroundImageIV)
